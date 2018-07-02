@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 9, Example 4</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		h1,h2,h3,h4,h5,h6,p {
+			margin: 0;
+		}
+
+		#divAdvert {
+			font: 12pt arial;
+		}	
+	</style>
+</head>
+<body>
+	<div id="divAdvert">
+		Here is an advertisement.
+	</div>
+	<script>
+		var divAdvert = document.getElementById("divAdvert");
+		divAdvert.style.fontStyle = "italic";
+		divAdvert.style.textDecoration = "underline";
+	</script>
+</body>
+</html>

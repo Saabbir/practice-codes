@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 6, Example 4</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		h1,h2,h3,h4,h5,h6,p {
+			margin: 0;
+		}		
+	</style>
+</head>
+<body>
+	<script>
+		var text = "He then said 'My Name is O'Connerly, yes that’s right, O'Connerly'";
+		document.write("Original: " + text + "<br>")
+
+		var myRegExp = /\B'|'\B/g;
+
+		text = text.replace(myRegExp, '"');
+		document.write("Corrected: " + text);
+	</script>
+</body>
+</html>

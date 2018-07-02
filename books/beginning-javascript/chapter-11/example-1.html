@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 11, Example 1</title>
+	<style>
+		body {
+			color: #000;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<form action="#" name="form1">
+		<p>
+			Paragraph inside from form1
+		</p>
+	</form>
+	<form action="#" name="form2">
+		<p>
+			Paragraph inside from form2
+		</p>
+	</form>
+	<form action="#" name="form3">
+		<p>
+			Paragraph inside from form3
+		</p>
+	</form>
+	<script>
+		var forms = document.forms;
+
+		for (var i = 0; i < forms.length; i++) {
+			alert(forms[i].name);
+		}
+	</script>
+</body>
+</html>

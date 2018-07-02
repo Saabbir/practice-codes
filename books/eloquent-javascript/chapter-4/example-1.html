@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 4, Example 1</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<p>Look at console!</p>
+	<script>
+		function range(start, end, step) {
+			if (step == null) {
+				step = 1;
+			}
+			var array = [];
+
+			if (step > 0) {
+				for (var i = start; i <= end; i += step) {
+					array.push(i)
+				}
+			} else {
+				for (var i = start; i >= end; i += step) {
+					array.push(i);
+				}
+			}
+
+			return array;
+		}
+
+		function sum(array) {
+			var total = 0;
+
+			for (var i = 0; i < array.length; i++) {
+				total += array[i];
+			}
+
+			return total;
+		}
+
+		console.log(range(1, 10));
+		console.log(range(5, 2, -1));
+		console.log(sum(range(1, 10)));
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 2, Example 7</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		var myString = "56.02 degrees centigrade";
+		var myInt;
+		var myFloat;
+
+		document.write("\"" + myString + "\" is " + parseInt(myString, 10) + " as an integer" + "<br/>");
+
+		myInt = parseInt(myString, 10);
+		document.write("\"" + myString + "\" when converted to an integer equals " + myInt + "<br/>");
+
+		myFloat = parseFloat(myString);
+		document.write("\"" + myString + "\" when converted to an floating point numbers equals " + myFloat);
+	</script>
+</body>
+</html>

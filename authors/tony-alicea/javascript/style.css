@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    color: #000;
+    background-color: #ddd;
+    font-size: 1.6rem;
+    font-family: monospace;
+    line-height: 1.5;
+    padding: 6rem 3rem;
+}
+
+h4 {
+    font-size: 5rem;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+p span {
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+p + h4 {
+    margin-top: 3rem;
+}
+
+div {
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 3rem 1.5rem;
+    }
+
+    h4 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+    }
+}

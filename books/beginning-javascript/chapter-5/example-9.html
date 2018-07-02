@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 5, Example 9</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		h1,h2,h3,h4,h5,h6,p {
+			margin: 0;
+		}		
+	</style>
+</head>
+<body>
+	<script>
+		function Person(firstName, lastName) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+		}
+
+		Person.prototype.getFullName = function() {
+			return this.firstName + " " + this.lastName;
+		};
+
+		Person.prototype.greet = function(person) {
+			document.write("Hello, " + person.getFullName() + ". I'm " + this.getFullName());
+		};
+
+		var jhonDoe = new Person("Jhon", "Doe");
+		var janeDoe = new Person("Jane", "Doe");
+
+		jhonDoe.greet(janeDoe);
+	</script>
+</body>
+</html>

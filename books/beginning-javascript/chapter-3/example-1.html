@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 3, Example 1</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		/*
+			01 - Take input from user by using prompt function.
+			02 - Take input as number for representing fahrenheit degree.
+			03 - Convert returned string into a number by using parseInt function.
+			04 - Store it into a variable for future reference.
+		*/
+		var degFahrenheit = parseInt(prompt("Enter the temperature in Fahrenheit: ", 32), 10);
+
+
+		/*
+			Apply formula to get centigrade value from fahrenheit
+			and store into a variable.
+			The formula is to convert Fahrenheit to Centigrade is 
+			°C = 5/9 (°F - 32).
+		*/
+		var degCentigrade = 5/9 * (degFahrenheit - 32);
+
+		// Display the results into the document.
+		document.write("\xB0" + degFahrenheit + " Fahrenheit is " + "\xB0" + degCentigrade + " Centigrade. <br/>");
+
+		/*
+			Check the centigrade value is under 0 or not.
+			If yes, then display a message with
+			"That's the freezing point of water".
+		*/
+		if (degCentigrade < 0) {
+			document.write("That's below the freezing point of water");
+		}
+
+		/*
+			Check the centigrade value is equal to 100 or not.
+			If yes, then display a message with
+			"That's the boiling point of water".
+		*/
+		if (degCentigrade == 100) {
+			document.write("That's the boiling point of water");
+		}
+
+		// Is degCentigrade is less than 100?
+		if (degCentigrade < 100 && degCentigrade >= 0) {
+			document.write("The temperature is less than \xB0100 Centigrade.");
+		}
+
+		// Is degCentigrade not less than 100?
+		if (!(degCentigrade <= 100)) {
+			document.write("The temperature is greater than \xB0100 Centigrade.");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 11, Example 9</title>
+</head>
+<body>
+	<div>Local time is <span id="localTime"></span></div>
+	<div id="cityTime"></div>
+
+	<form action="#" name="myForm">
+		<select name="cityList" size="5">
+			<option value="60" selected="selected">Berlin</option>
+			<option value="330">Bombay</option>
+			<option value="0">London</option>
+			<option value="180">Moscow</option>
+			<option value="-300">New York</option>
+			<option value="60">Paris</option>
+			<option value="-480">San Francisco</option>
+			<option value="600">Sydney</option>
+		</select>
+		<p>
+			<input type="checkbox" name="dstChkbx" id="dstChkbx"> <!-- dstChkbx = Daylight Savings Time Checkbox --> 
+			<label for="dstChkbx">Adjust city time for daylight savings</label>
+		</p>
+	</form>
+
+	<script>
+		var myForm = document.myForm;
+
+		function updateTimeZone() {
+			var cityList = myForm.cityList;
+			var options = cityList.options;
+			var selectedOption = options[options.selectedIndex];
+			var offset = selectedOption.value;
+			var selectedCity = selectedOption.text;
+
+			var dst = 0; // dst = Daylight Savings Time
+			if (myForm.dstChkbx.checked) {
+				dst = 60;
+			}
+
+			var now = new Date();
+
+			var localTimeDiv = document.getElementById("localTime");
+			localTimeDiv.innerHTML = now.toLocaleString();
+
+			now.setMinutes(now.getMinutes() + now.getTimezoneOffset() + parseInt(offset, 10) + dst);
+
+			var resultsText = selectedCity + " time is " + now.toLocaleString();
+
+			var cityTimeDiv = document.getElementById("cityTime");
+			cityTimeDiv.innerHTML = resultsText;
+		}
+
+		myForm.cityList.addEventListener("change", updateTimeZone);
+		myForm.dstChkbx.addEventListener("click", updateTimeZone);
+
+		updateTimeZone();
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 10, Example 1</title>
+	<style>
+		body {
+			color: #000;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		img {
+			display: inline-block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<img src="bd.png" alt="bd" onclick="changeImg(this)">
+	<img src="australia.png" alt="australia" onclick="changeImg(this)">
+	<script>
+		var myImages = [
+			"bd.png",
+			"australia.png",
+			"barbuda.png",
+			"uk.png"
+		];
+
+		function changeImg(that) {
+			var randomNumber = Math.round(Math.random() * 3);
+
+			while (that.src.indexOf(myImages[randomNumber]) != -1) {
+				randomNumber = Math.round(Math.random() * 3);
+			}
+
+			that.src = myImages[randomNumber];
+		}
+	</script>
+</body>
+</html>

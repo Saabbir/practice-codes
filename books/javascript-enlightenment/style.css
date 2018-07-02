@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    color: #000;
+    background-color: #ddd;
+    font-size: 1.6rem;
+    font-family: monospace;
+    line-height: 1.5;
+    padding: 3rem;
+}
+
+h4 {
+    font-size: 5rem;
+    line-height: 1;
+    text-transform: uppercase;
+    max-width: 100rem;
+}
+
+p {
+    font-size: 3rem;
+    max-width: 100rem;
+}
+
+p span {
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+* + h4 {
+    margin-top: 3rem;
+}
+
+* + p {
+    margin-top: 3rem;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 3rem 1.5rem;
+    }
+
+    h4 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+* + ul {
+    margin-top: 3rem;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+* + .table-container {
+    margin-top: 3rem;
+}
+
+table {
+    border: 2px solid #000;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 2rem;
+}
+
+th {
+    text-transform: uppercase;
+}
+
+th, td {
+    padding: 5px 30px;
+    border: 2px solid #000;
+    white-space: nowrap;
+    text-align: left;
+}
+
+/*pre {
+    font-size: 2rem;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    tab-size: 1;
+    hyphens: none;
+    direction: ltr;
+    line-height: 2;    
+}
+
+code {
+    font-style: italic;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    font-family: monospace;
+    display: block;
+    padding: 1rem;
+    border: 2px solid #000;    
+}*/
+
+pre[class*="language-"] {
+    padding: 1em;
+    margin: 3rem 0 0 0;
+    overflow: auto;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 2rem;
+    position: relative;
+}
+
+pre[class*="language-"]:before {
+    position: absolute;
+    width: auto;
+    background: crimson;
+    content: "JS";
+    top: 0;
+    padding: 5px 20px;
+    right: 0;    
+}
+
+pre[class*="language-"], 
+:not(pre) > code[class*="language-"] {
+    background: rgba(0,0,0,0.85);
+}
+
+code[class*="language-"], pre[class*="language-"] {
+    text-shadow: none;
+    tab-size: 1;
+}

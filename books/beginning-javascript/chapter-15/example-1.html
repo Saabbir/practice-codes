@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 15, Example 1</title>
+</head>
+<body>
+	<div>
+		<button id="playbackController">Play</button>
+	</div>
+	<br>
+	<div>
+		<video id="video">
+			<source src="video.mp4">
+			<source src="video.webm">
+		</video>
+	</div>
+	<script>
+		var video = document.getElementById("video");
+		var playbackController = document.getElementById("playbackController");
+
+		function playbackClick(e) {
+			var target = e.target;
+
+			if (target.innerHTML == "Play") {
+				video.play();
+				target.innerHTML = "Pause";
+			} else {
+				video.pause();
+				target.innerHTML = "Play";
+			}
+		}
+
+		playbackController.addEventListener("click", playbackClick)
+	</script>
+</body>
+</html>

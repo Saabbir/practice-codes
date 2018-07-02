@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 9, Example 3</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		h1,h2,h3,h4,h5,h6,p {
+			margin: 0;
+		}		
+	</style>
+</head>
+<body>
+	<script>
+		var newText = document.createTextNode("This is heading 1");
+		var newElement = document.createElement("h1");
+
+		newElement.appendChild(newText);
+		document.body.appendChild(newElement);
+
+		newText = document.createTextNode("This is some text in a paragraph");
+		newElement = document.createElement("p");
+
+		newElement.appendChild(newText);
+		document.body.appendChild(newElement);
+	</script>
+</body>
+</html>

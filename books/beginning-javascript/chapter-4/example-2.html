@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 4, Example 2</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		function toCentigrade(degFahren) {
+			var degCent = 5 / 9 * (degFahren - 32);
+			document.write(degFahren + " Fahrenheit is " + degCent + " Celsius.</br>");
+		}
+
+		function toFahrenheit(degCent) {
+			var degFahren = 9 / 5 * degCent + 32;
+			document.write(degCent + " Celsius is " + degFahren + " Fahrenheit.</br>");
+		}
+
+		function convert(converter, temperature) {
+			converter(temperature);
+		}
+
+		convert(toFahrenheit, 23);
+		convert(toCentigrade, 75);
+	</script>
+</body>
+</html>

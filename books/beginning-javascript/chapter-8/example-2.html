@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 8, Example 2</title>
+	<style>
+		body {
+			color: #000;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}		
+	</style>
+</head>
+<body>
+	<script>
+		var colorDepth = window.screen.colorDepth;
+
+		switch (colorDepth) {
+			case 1:
+			case 4:
+				document.bgColor = "white";
+				break;
+			case 8:
+			case 15:
+			case 16:
+				document.bgColor = "blue";
+				break;
+			case 24:
+			case 32:
+				document.bgColor = "skyblue";
+				break;
+			default:
+				document.bgColor = "white";
+		}
+
+		document.write("Your screen supports " + colorDepth + " bit color");
+	</script>
+</body>
+</html>

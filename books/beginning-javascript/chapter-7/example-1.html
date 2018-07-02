@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 7, Example 1</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		h1,h2,h3,h4,h5,h6,p {
+			margin: 0;
+		}		
+	</style>
+</head>
+<body>
+	<script>
+		var time = new Date();
+
+		var html = "<p>UTC Time is: " + time.toUTCString() + "</p><br>";
+
+		html += "Local Time is: " + time.toLocaleString() + "</p><br>";
+
+		html += "<p>Time Zone Offset is: " + time.getTimezoneOffset() + "</p><br>";
+
+		html += "<p>Using toLocaleTimeString() gives: " + time.toLocaleTimeString() + "</p><br>";
+
+		html += "<p>Using toTimeString() gives: " + time.toTimeString() + "</p><br>";
+
+		html += "<p>Using toLocaleDateString() gives: " + time.toLocaleDateString() + "</p><br>";
+
+		html += "<p>Using toDateString() gives: : " + time.toDateString() + "</p>";
+
+		document.write(html);
+	</script>
+</body>
+</html>

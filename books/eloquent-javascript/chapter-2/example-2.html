@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 2, Example 2</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<p>Look at console!</p>
+	<script>
+		for (var i = 1; i <= 100; i++) {
+			var output = "";
+
+			if (i % 3 === 0) {
+				output += "Fizz";
+			}
+
+			if (i % 5 === 0) {
+				output += "Buzz";
+			}
+
+			console.log(output || i);
+		}
+	</script>
+</body>
+</html>

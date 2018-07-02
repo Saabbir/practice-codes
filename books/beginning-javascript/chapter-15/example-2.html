@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 15, Example 2</title>
+</head>
+<body>
+	<div>
+		<button id="playbackController">Play</button>
+		<button id="muteController">Mute</button>		
+	</div>
+	<br>
+	<video id="video" loop>
+		<source src="video.mp4">
+		<source src="video.webm">
+	</video>
+	<script>
+		var video = document.getElementById("video");
+		var playbackController = document.getElementById("playbackController");
+		var muteController = document.getElementById("muteController");
+
+		function playbackClick(e) {
+			var target = e.target;
+
+			if (video.paused) {
+				video.play();
+				target.innerHTML = "Pause";
+			} else {
+				video.pause();
+				target.innerHTML = "Resume";
+			}
+		}
+
+		function muteClick(e) {
+			var target = e.target;
+
+			if (video.muted) {
+				video.muted = false;
+				target.innerHTML = "Mute";
+			} else {
+				video.muted = true;
+				target.innerHTML = "Unmute";
+			}
+		}
+
+		playbackController.addEventListener("click", playbackClick);
+		muteController.addEventListener("click", muteClick);
+	</script>
+</body>
+</html>

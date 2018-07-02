@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 3, Example 3</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		var secretNumber;
+		secretNumber = prompt("Guess the secret number between 1 and 5");
+		secretNumber = parseInt(secretNumber, 10);
+
+		switch (secretNumber) {
+			case 1:
+			case 2:
+				document.write("Too low!");
+				break;
+			case 3:
+				document.write("You guessed the secret number!");
+				break;
+			case 4:
+			case 5:
+				document.write("Too high!");
+				break;
+			default:
+				document.write("You did not enter a number between 1 and 5.");
+				break;
+		}
+	</script>
+</body>
+</html>

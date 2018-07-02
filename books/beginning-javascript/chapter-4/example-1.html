@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 4, Example 1</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		function fahrenheitToCentigrade(degFahrenheit) {
+			var degCentigrade = 5/9 * (degFahrenheit - 32);
+			return degCentigrade;
+		}
+
+		var degFahrenheit = [212, 32, -459.15];
+		var degCentigrade = [];
+		var loopCounter;
+
+		for (loopCounter = 0; loopCounter <= 2; loopCounter++) {
+			degCentigrade[loopCounter] = fahrenheitToCentigrade(degFahrenheit[loopCounter]);
+		}
+
+		for (loopCounter = 2; loopCounter >= 0; loopCounter--) {
+			document.write("\xB0" + degFahrenheit[loopCounter] + " Fahrenheit is " + 
+			"\xB0" + degCentigrade[loopCounter] + " Centigrade. <br />");
+		}
+	</script>
+</body>
+</html>

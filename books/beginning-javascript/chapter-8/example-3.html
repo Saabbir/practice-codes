@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 8, Example 3</title>
+	<style>
+		body {
+			color: #000;
+			margin: 0;
+			padding: 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}		
+	</style>
+</head>
+<body>
+	<img src="" alt="image" style="display: block;max-width: 100%">
+	<script>
+		var images = [
+			"https://www.aussiespecialist.com/content/asp/en_gb/sales-resources/image-and-video-galleries/jcr:content/mainParsys/hero/image.adapt.1663.medium.jpg",
+			"https://www.w3schools.com/css/img_forest.jpg",
+			"http://media.istockphoto.com/photos/plant-growing-picture-id510222832?k=6&m=510222832&s=612x612&w=0&h=Pzjkj2hf9IZiLAiXcgVE1FbCNFVmKzhdcT98dcHSdSk=",
+			"http://www.jpl.nasa.gov/spaceimages/images/wallpaper/PIA21403-640x350.jpg"
+		];
+
+		var imgIndex = prompt("Enter a number from 0 to 3", "");
+
+		document.images[0].src = images[imgIndex];
+	</script>
+</body>
+</html>

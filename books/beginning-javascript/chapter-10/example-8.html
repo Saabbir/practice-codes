@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 10, Example 8</title>
+	<style>
+		body {
+			color: #000;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		.underline {
+			color: red;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<p>Paragraph 1</p>
+	<p>Paragraph 2</p>
+	<p>Paragraph 3</p>
+	<script>
+		function handleEvent(e) {
+			var target = e.target;
+			var type = e.type;
+
+			if (target.tagName == "P") {
+				if (type == "mouseover") {
+					target.className = "underline";
+				} else if (type == "mouseout") {
+					target.className = "";
+				}
+			}
+
+			if (type == "click") {
+				alert("You clicked the mouse button at the X: " + e.clientX + " and Y: " + e.clientY + " coordinates");
+			}
+		}
+
+		document.addEventListener("mouseover", handleEvent);
+		document.addEventListener("mouseout", handleEvent);
+		document.addEventListener("click", handleEvent);
+	</script>
+</body>
+</html>

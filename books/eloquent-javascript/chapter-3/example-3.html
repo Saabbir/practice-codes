@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 3, Example 3</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<p>Look at console!</p>
+	<script>
+		function countBs (str) {
+			var number = 0;
+
+			for (var i = 0; i < str.length; i++) {
+				if (str.charAt(i).toLowerCase() === "b") {
+					number += 1;
+				}
+			}
+
+			return number;
+		}
+
+		function countChar (str, char) {
+			var number = 0;
+
+			for (var i = 0; i < str.length; i++) {
+				if (str.charAt(i).toLowerCase() === char) {
+					number += 1;
+				}
+			}
+
+			return number;
+		}
+
+		console.log(countBs("Big Bamboozle Before Brooklyn"));
+		console.log(countChar("Ku Klux Klan", "k"));
+	</script>
+</body>
+</html>

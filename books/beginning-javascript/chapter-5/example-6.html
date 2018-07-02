@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 5, Example 6</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+		var dateNow = new Date();
+
+		var yearNow = dateNow.getFullYear();
+
+		var monthNow = months[dateNow.getMonth()];
+
+		// var dayNow = dateNow.getDate();
+		var dayNow = parseInt(prompt("Enter the day", dateNow.getDate()));
+
+		if ( !(dayNow >= 1 && dayNow <= 31) ) {
+			var dayNow = parseInt(prompt("Please enter a valid day", dateNow.getDate()));			
+		}
+
+		var daySuffix;
+
+		switch (dayNow) {
+			case 1:
+			case 21:
+			case 31:
+				daySuffix = "st";
+				break;
+			case 2:
+			case 22:
+				daySuffix = "nd";
+				break;
+			case 3:
+			case 23:
+				daySuffix = "rd";
+				break;
+			default: 
+				daySuffix = "th";
+				break;
+		}
+
+		document.write("It is the " + dayNow + daySuffix + " day ");
+		document.write("in the month of " + monthNow);
+		document.write(" in the year " + yearNow);
+	</script>
+</body>
+</html>

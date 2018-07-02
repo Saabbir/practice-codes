@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Apply JavaScript Inline</title>
+</head>
+<body>
+	<script>
+		function createParagraph() {
+			var para = document.createElement('p');
+			para.textContent = 'You clicked the button!';
+			document.body.appendChild(para);
+		}
+	</script>
+
+	<button onclick="createParagraph()">Click me</button>
+</body>
+</html>

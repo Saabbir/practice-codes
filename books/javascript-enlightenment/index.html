@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Enlightment Excerpt</title>
+	<link rel="stylesheet" href="prism.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<p>
+		The JavaScript language contains nine native (or built-in) object constructors.
+	</p>
+	<ul>
+		<li>
+			<p>1. String</p>
+		</li>
+		<li>
+			<p>2. Number</p>
+		</li>
+		<li>
+			<p>3. Boolean</p>
+		</li>
+		<li>
+			<p>4. Object</p>
+		</li>
+		<li>
+			<p>5. Array</p>
+		</li>
+		<li>
+			<p>6. Function</p>
+		</li>
+		<li>
+			<p>7. Date</p>
+		</li>
+		<li>
+			<p>8. Error</p>
+		</li>
+		<li>
+			<p>9. RegExp</p>
+		</li>
+	</ul>
+	<p>
+		* Notice they all started with a capital letter. The word 'String' and 'string' are not same in JavaScript. JavaScript is case sensitive.
+	</p>
+	<p>
+		Q: Then why they all started with a capital letter?
+	</p>
+	<p>
+		A: These functions are created by intention to use as a object constructor and by convention a constructor function starts with a capital letter.
+	</p>	
+	<p>
+		Typeof all returns function. Try it in console.
+	</p>
+	<div class="table-container">
+		<table>
+			<thead>
+				<tr>
+					<th>typeof</th>
+					<th>return string</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>typeof String</code></td>
+					<td>"function"</td>
+				</tr>
+				<tr>
+					<td><code>typeof Number</code></td>
+					<td>"function"</td>
+				</tr>
+				<tr>
+					<td><code>typeof Boolean</code></td>
+					<td>"function"</td>
+				</tr>
+				<tr>
+					<td><code>typeof Object</code></td>
+					<td>"function"</td>
+				</tr>
+				<tr>
+					<td><code>typeof Array</code></td>
+					<td>"function"</td>
+				</tr>
+				<tr>
+					<td><code>typeof Function</code></td>
+					<td>"function"</td>
+				</tr>
+				<tr>
+					<td><code>typeof Date</code></td>
+					<td>"function"</td>
+				</tr>
+				<tr>
+					<td><code>typeof Error</code></td>
+					<td>"function"</td>
+				</tr>
+				<tr>
+					<td><code>typeof RegExp</code></td>
+					<td>"function"</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>	
+	<p>
+		Normal call of any constructor function can produce both primitive values or complex values.
+	</p>
+	<p>
+		When we call String, Number, and Boolean function as a normal function, it returns "", 0, false primitive values respectively.
+	</p>
+	<p>
+		While normal call of Object, Array, Error, RegExp produces object. Normal call of Date function also returns string primitive value.
+	</p>
+	<p>
+		Calling these functions as a normal function:
+	</p>
+	<div class="table-container">
+		<table>
+			<thead>
+				<tr>
+					<th>normal function call</th>
+					<th>return value</th>
+					<th>return value type</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>String()</code></td>
+					<td>""</td>
+					<td>"string"</td>
+				</tr>
+				<tr>
+					<td><code>Number()</code></td>
+					<td>0</td>
+					<td>"number"</td>
+				</tr>
+				<tr>
+					<td><code>Boolean()</code></td>
+					<td>false</td>
+					<td>"boolean"</td>
+				</tr>
+				<tr>
+					<td><code>Object()</code></td>
+					<td>{}</td>
+					<td>"object"</td>
+				</tr>
+				<tr>
+					<td><code>Array()</code></td>
+					<td>[]</td>
+					<td>"object"</td>
+				</tr>
+				<tr>
+					<td><code>Function()</code></td>
+					<td>ƒ anonymous() {}</td>
+					<td>"function"</td>
+				</tr>
+				<tr>
+					<td><code>Date()</code></td>
+					<td>"Standard Time"</td>
+					<td>"string"</td>
+				</tr>
+				<tr>
+					<td><code>Error()</code></td>
+					<td>Error</td>
+					<td>"object"</td>
+				</tr>
+				<tr>
+					<td><code>RegExp()</code></td>
+					<td>/(?:)/</td>
+					<td>"object"</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<p>
+		When we invoke a function using `new` operator in front of it, it returns an object. We call that object instance of that constructor function.
+	</p>	
+	<p>
+		Calling these functions as a constructor function:
+	</p>
+	<div class="table-container">
+		<table>
+			<thead>
+				<tr>
+					<th>constructor function call</th>
+					<th>return value</th>
+					<th>return value type</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>new String()</code></td>
+					<td>String {length: 0, [[PrimitiveValue]]: ""}</td>
+					<td>"object"</td>
+				</tr>
+				<tr>
+					<td><code>new Number()</code></td>
+					<td>Number {[[PrimitiveValue]]: 0}</td>
+					<td>"object"</td>
+				</tr>
+				<tr>
+					<td><code>new Boolean()</code></td>
+					<td>Boolean {[[PrimitiveValue]]: false}</td>
+					<td>"object"</td>
+				</tr>
+				<tr>
+					<td><code>new Object()</code></td>
+					<td>{}</td>
+					<td>"object"</td>
+				</tr>
+				<tr>
+					<td><code>new Array()</code></td>
+					<td>[]</td>
+					<td>"object"</td>
+				</tr>
+				<tr>
+					<td><code>new Function()</code></td>
+					<td>ƒ anonymous() {}</td>
+					<td>"function"</td>
+				</tr>
+				<tr>
+					<td><code>new Date()</code></td>
+					<td>Standard Time</td>
+					<td>"object"</td>
+				</tr>
+				<tr>
+					<td><code>new Error()</code></td>
+					<td>Error</td>
+					<td>"object"</td>
+				</tr>
+				<tr>
+					<td><code>new RegExp()</code></td>
+					<td>/(?:)/</td>
+					<td>"object"</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<p>
+		When we read a property or method on an object where they are not exist, the object look for these property or method on it's `__proto__` property. The `__proto__` property points to the memory location where it's constructor function's `prototype` property points to.
+	</p>
+<pre class="language-javascript"><code>	var obj = new Object();
+	obj instanceof Object; // true
+	obj.__proto__ === Object.prototype; // true
+	obj.__proto__.constructor === Object.prototype.constructor; // true
+	obj.constructor === Object.prototype.constructor; // true
+	obj.constructor === Object; // true
+</code></pre>
+	<p>
+		Interesting!
+	</p>
+<pre class="language-javascript"><code>	var obj = {};
+	obj.constructor; // Object
+	{}.constructor; // Uncaught SyntaxError: Unexpected token .
+	[].constructor; // Array
+	'string'.constructor; // String
+	100.constructor; // Uncaught SyntaxError: Invalid or unexpected token
+	true.constructor; // Boolean
+	function(){}.constructor; // Uncaught SyntaxError: Unexpected token (	
+</code></pre>
+	<p>
+		`instanceof` Operator:
+	</p>
+<pre class="language-javascript"><code> Object instanceof Object; //true
+	Object instanceof Object; //true
+	Object instanceof Function; //true
+
+	Function instanceof Function; // true	
+	Function instanceof Object; // true
+
+	Array instanceof Object; // true
+	Array instanceof Function; // true
+	Array instanceof Array; // false
+
+	String instanceof Object; // true
+	String instanceof Function; // true	
+	String instanceof String; // false
+
+	Number instanceof Object; // true
+	Number instanceof Function; // true	
+	Number instanceof Number; // false
+
+	Boolean instanceof Object; // true
+	Boolean instanceof Function; // true	
+	Boolean instanceof Boolean; // false
+
+	Date instanceof Object; // true
+	Date instanceof Function; // true	
+	Date instanceof Date; // false
+
+	RegExp instanceof Object; // true
+	RegExp instanceof Function; // true	
+	RegExp instanceof RegExp; // false
+
+	Error instanceof Object; // true
+	Error instanceof Function; // true	
+	Error instanceof Error; // false
+</code></pre>
+<pre class="language-javascript"><code> var obj = {};
+	obj.constructor; // Object
+	obj instanceof Object; // true
+	obj.__proto__;
+	Object.prototype;
+	obj.__proto__ === Object.prototype;
+	Object.prototype.constructor === a.constructor; // true
+</code></pre>
+	<p>
+		Interesting! * Need to understand.
+	</p>
+<pre class="language-javascript"><code> Math.__proto__.__proto__; // null
+	Object.__proto__.__proto__.__proto__; // null
+</code></pre>
+	<p>
+		Need to understand clearly what is happening under the hood:
+	</p>
+<pre class="language-javascript"><code> var b; // declare a variable
+	function a(){}; // declare a function
+	a instanceof Object; // true
+	b = new a(); // invoke function as a constructor
+	b instanceof a; // true
+	b instanceof Object; // true
+	b.__proto__ === a.prototype; // true
+</code></pre>
+	<p>
+		Literals are created from same constructor.
+	</p>
+<pre class="language-javascript"><code> var myNumber = new Number(23); // an object
+	var myNumberLiteral = 23; // primitive number value, not an object
+	var myString = new String('male'); // an object
+	var myStringLiteral = 'male'; // primitive string value, not an object
+	var myBoolean = new Boolean(false); // an object
+	var myBooleanLiteral = false; // primitive boolean value, not an object
+	var myObject = new Object();
+	var myObjectLiteral = {};
+	var myArray = new Array('foo', 'bar');
+	var myArrayLiteral = ['foo', 'bar'];
+	var myFunction = new Function("x", "y", "return x*y");
+	var myFunctionLiteral = function(x, y) {return x*y};
+
+	var myRegExp = new RegExp('\bt[a-z]+\b');
+	var myRegExpLiteral = /\bt[a-z]+\b/;
+
+	// verify that literals are created from same constructor
+	console.log(myNumber.constructor, myNumberLiteral.constructor);
+	console.log(myString.constructor, myStringLiteral.constructor);
+	console.log(myBoolean.constructor, myBooleanLiteral.constructor);
+	console.log(myObject.constructor, myObjectLiteral.constructor);
+	console.log(myArray.constructor, myArrayLiteral.constructor);
+	console.log(myFunction.constructor, myFunctionLiteral.constructor);
+	console.log(myRegExp.constructor, myRegExpLiteral.constructor);	
+</code></pre>
+	<p>
+		Base Object and Function:
+	</p>
+	<p>At the top of the prototype chain is `Object.prototype`. Every object in JavaScript inherit methods and properties from the `Object.prototype`.</p>
+<pre class="language-javascript"><code> Object;
+	typeof Object; // function
+	Object instanceof Object; // true
+	Object instanceof Function; // true
+
+	Object.constructor; // Function
+
+	Object.__proto__ === Function.prototype; // true
+
+	Function.prototype.__proto__ === Object.prototype; // true
+
+	Object.prototype.__proto__ === null; // ture
+
+	Object.prototype: {
+		constructor: ƒ Object(),
+		hasOwnProperty: ƒ hasOwnProperty(),
+		isPrototypeOf: ƒ isPrototypeOf(),
+		propertyIsEnumerable: ƒ propertyIsEnumerable(),
+		toLocaleString: ƒ toLocaleString(),
+		toString: ƒ toString(),
+		valueOf: ƒ valueOf(),
+		__defineGetter__: ƒ __defineGetter__(),
+		__defineSetter__: ƒ __defineSetter__(),
+		__lookupGetter__: ƒ __lookupGetter__(),
+		__lookupSetter__: ƒ __lookupSetter__()		
+	}
+
+	Function.prototype = {
+		apply: ƒ apply(),
+		arguments: (...),
+		bind: ƒ bind(),
+		call: ƒ call(),
+		caller: (...),
+		constructor: ƒ Function(),
+		length: 0,
+		name: "",
+		toString: ƒ toString()
+	}	
+</code></pre>
+
+	<p>
+		`Object.prototype` is the last stop in the prototype chain. `Object.prototype` is an object. It is the core object in JavaScript. It is created without any constructor. That means this is the only object that is created directly in JavaScript without any constructor function. This is not an instance object.
+	</p>
+<pre class="language-javascript"><code> typeof Object.prototype; // object
+	Object.prototype instanceof Object; // false
+	Object.prototype instanceof Function; // false
+</code></pre>
+	<script src="prism.js"></script>
+</body>
+</html>

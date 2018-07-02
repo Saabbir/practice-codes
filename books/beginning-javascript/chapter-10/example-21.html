@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 10, Example 21</title>
+	<style>
+		[data-drop-target] {
+			width: 200px;
+			height: 400px;
+			margin: 2px;
+			background-color: gainsboro;
+			float: left;
+		}
+
+		.box {
+			width: 200px;
+			height: 200px;
+		}
+
+		.navy {
+			background-color: navy;
+		}
+
+		.red {
+			background-color: red;
+		}
+
+		.drag-enter {
+			border: 2px dashed #000;
+		}
+	</style>
+</head>
+<body>
+	<div data-drop-target="true">
+		<div draggable="true" id="box1" class="box navy"></div>
+		<div draggable="true" id="box2" class="box red"></div>
+	</div>
+	<div data-drop-target="true"></div>
+
+	<script>
+		function handleDragStart(e) {
+			e.dataTransfer.setData("text", this.id);
+		}
+
+		function handleDragEnterLeave(e) {
+			if (e.type == "dragenter") {
+				this.className = "drag-enter";
+			} else {
+				this.className = "";
+			}
+		}
+
+		function handleOverDrop(e) {
+			e.preventDefault();
+
+			if (e.type != "drop") {
+				return;
+			}
+
+			var draggedId = e.dataTransfer.getData("text");
+			var draggedElement = document.getElementById(draggedId);
+
+			if (draggedElement.parentNode == this) {
+				this.className = "";
+				return;
+			}
+
+			draggedElement.parentNode.removeChild(draggedElement);
+
+			this.appendChild(draggedElement);
+			this.className = "";
+		}
+		
+		var draggables = document.querySelectorAll("[draggable]");
+		var dropTargets = document.querySelectorAll("[data-drop-target]");
+
+		for (var i = 0; i < draggables.length; i++) {
+			draggables[i].addEventListener("dragstart", handleDragStart);
+		}
+
+		for (var i = 0; i < dropTargets.length; i++) {
+			dropTargets[i].addEventListener("dragover", handleOverDrop);
+			dropTargets[i].addEventListener("drop", handleOverDrop);
+			dropTargets[i].addEventListener("dragenter", handleDragEnterLeave);
+			dropTargets[i].addEventListener("dragleave", handleDragEnterLeave);
+		}
+	</script>
+</body>
+</html>

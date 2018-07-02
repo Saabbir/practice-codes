@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 5, Example 4</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		h1,h2,h3,h4,h5,h6,p {
+			margin: 0;
+		}
+
+		table {
+			margin: 30px auto 0;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		var myNumber = prompt("Enter the number to be rounded", "10.50");
+
+		document.write("<h3>The number you entered was " + myNumber + "</h3>");
+
+		document.write("<p>The rounding results for this number are</p>");
+
+		document.write("<table width='150' border='1'>");
+
+			document.write("<tr><th>Method</th><th>Result</th></tr>");
+
+			document.write("<tr><td>parseInt()</td><td>" + parseInt(myNumber, 10) + "</td></tr>");
+
+			document.write("<tr><td>ceil()</td><td>" + Math.ceil(myNumber) + "</td></tr>");
+
+			document.write("<tr><td>floor()</td><td>" + Math.floor(myNumber) + "</td></tr>");
+
+			document.write("<tr><td>round()</td><td>" + Math.round(myNumber) + "</td></tr>");
+
+		document.write("</table>");
+	</script>
+</body>
+</html>

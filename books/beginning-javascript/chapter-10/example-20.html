@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 10, Example 20</title>
+	<style>
+		body {
+			color: #000;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		.drop-zone {
+			width: 300px;
+			padding: 20px;
+			border: 2px dashed #000;
+			margin: 0 auto;
+		}
+
+		.box {
+			width: 100px;
+			height: 100px;
+			margin: 0 auto 15px;
+		}
+
+		.red {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div draggable="true" class="box red"></div>
+	<div id="dropZone" class="drop-zone">Drop Zone!</div>
+	<div id="dropStatus"></div>
+
+	<script>
+		var dragBox = document.querySelector("[draggable]");
+		var dropZone = document.getElementById("dropZone");
+		var dropStatus = document.getElementById("dropStatus");
+
+		function dragStartHandler(e) {
+			e.dataTransfer.setData("text", "Drag and Drop!");
+		}
+
+		function dragDropHandler(e) {
+			e.preventDefault();
+
+			if (e.type == "dragover") {
+				dropStatus.innerHTML = "You're dragging over the drop zone!";
+			} else {
+				dropStatus.innerHTML = e.dataTransfer.getData("text");
+			}
+		}
+
+		dragBox.addEventListener("dragstart", dragStartHandler);
+		dropZone.addEventListener("dragover", dragDropHandler);
+		dropZone.addEventListener("drop", dragDropHandler);
+	</script>
+</body>
+</html>

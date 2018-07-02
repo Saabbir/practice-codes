@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 10, Example 3</title>
+	<style>
+		body {
+			color: #000;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		img {
+			display: inline-block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<a href="page.html" id="link">Link</a>
+	<script>
+		function link() {
+			alert("This link is going nowhere");
+			return false;
+		}
+
+		document.getElementById("link").onclick = link;
+	</script>
+</body>
+</html>

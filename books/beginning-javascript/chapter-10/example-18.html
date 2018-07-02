@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 10, Example 18</title>
+	<style>
+		body {
+			color: #000;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		.drop-zone {
+			width: 300px;
+			padding: 20px;
+			border: 2px dashed #000;
+			margin: 0 auto;
+		}	
+	</style>
+</head>
+<body>
+	<div id="dropZone" class="drop-zone">Drop Zone!</div>
+	<div id="dropStatus"></div>
+
+	<script>
+		var dropZone = document.getElementById("dropZone");
+		var dropStatus = document.getElementById("dropStatus");
+
+		function handleDragEnter(e) {
+			dropStatus.innerHTML = "You're dragging something!";
+		}
+
+		dropZone.addEventListener("dragenter", handleDragEnter);
+	</script>
+</body>
+</html>

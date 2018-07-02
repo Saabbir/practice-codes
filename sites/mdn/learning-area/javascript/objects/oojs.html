@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Object-oriented JavaScript example</title>
+    </head>
+    <body>
+        <div>
+            <label for="jscode">Enter code:</label>
+            <input type="text" id="jscode">
+            <button>Submit code</button>
+        </div>
+        <p></p>
+        <script>
+            var input = document.querySelector('input');
+            var btn = document.querySelector('button');
+            var para = document.querySelector('p');
+
+            btn.onclick = function() {
+                var code = input.value;
+                para.textContent = eval(code);
+            }
+
+            function Person(firstName, lastName, age, gender, interests) {
+                this.name = {
+                    firstName: firstName,
+                    lastName: lastName
+                };
+                this.age = age;
+                this.gender = gender;
+                this.interests = interests;
+            }
+
+            Person.prototype.bio = function() {
+                // first define a string, and make it equal to the part of the bio
+                // that we know will always be the same.
+                var string = this.name.firstName + ' ' + this.name.lastName + ' is ' + this.age + ' years old. ';
+
+                // define the variable that will contain 
+                // the pronoun part of the second sentence
+                var pronoun;
+
+                // check what the value of gender is, and set pronoun
+                // to an appropriate value in each case
+                if (this.gender.toLowerCase() === 'male') {
+                    pronoun = 'He likes ';
+                } else if (this.gender.toLowerCase() === 'female') {
+                    pronoun = 'She likes ';
+                } else {
+                    pronoun = 'They likes ';
+                }
+
+                // add the pronoun string on to the end of the main string
+                string += pronoun;
+
+                // use another conditional to structure the last part of the
+                // second sentence depending on whether the number of interests
+                // is 1, 2, or 3
+                if (this.interests.length === 1) {
+                    string += this.interests[0] + '.';
+                } else if (this.interests.length === 2) {
+                    string += this.interests[0] + ' and ' + this.interests[1] + '.';
+                } else {
+                    // if there are more than 2 interests, we loop through them
+                    // all, adding each one to the main string followed by a comma,
+                    // except for the last one, which needs an and & a full stop                     
+                    for (var i = 0; i < this.interests.length; i++) {
+                        if (i === this.interests.length - 1) {
+                            string += 'and ' + this.interests[i] + '.';
+                        } else {
+                            string += this.interests[i] + ', ';
+                        }
+                    }
+                }
+                
+                // finally, with the string built, we alert() it
+                alert(string);
+            };
+
+            Person.prototype.greeting = function() {
+                alert('Hi I\'m ' + this.name.firstName);
+            };
+
+            Person.prototype.farewell = function() {
+                alert(this.name.firstName + ' has left the building, Bye for now!');
+            };
+
+            var saabbir = new Person('Saabbir', 'Hossain', 24, 'male', ['playing', 'programming']);
+            var sabrina = new Person('Sabrina', 'Akhtar', 20, 'female', ['cooking', 'watching movies', 'listening music']);
+
+            function Teacher(firstName, lastName, age, gender, interests, subject) {
+                Person.call(this, firstName, lastName, age, gender, interests);
+                this.subject = subject;
+            }
+
+            Teacher.prototype = Object.create(Person.prototype);
+            Teacher.prototype.constructor = Teacher;
+            Teacher.prototype.greeting = function() {
+                var prefix;
+
+                if (this.gender.toLowerCase() === 'male') {
+                    prefix = 'Mr.';
+                } else if (this.gender.toLowerCase() === 'female') {
+                    prefix = 'Mrs.';
+                } else {
+                    prefix = 'Mx.';
+                }
+
+                alert('Hello. My name is ' + prefix + ' ' + this.name.lastName + ', and I teach ' + this.subject + '.');
+            }
+
+            var teacher1 = new Teacher('Abdul', 'Karim', '42', 'Male', ['education', 'cricket'], 'Math');
+
+            function Student(firstName, lastName, age, gender, interests) {
+                Person.call(this, firstName, lastName, age, gender, interests);
+            }
+
+            Student.prototype = Object.create(Person.prototype);
+            Student.prototype.constructor = Student;
+            Student.prototype.greeting = function() {
+                alert('Yo! I\'m ' + this.name.firstName + '.');
+            }
+
+            var student1 = new Student('Jorina', 'Kapoor', 17, 'female', ['chocolate', 'ice-cream']);
+        </script>        
+    </body>
+</html>

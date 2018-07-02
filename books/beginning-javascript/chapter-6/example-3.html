@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 6, Example 3</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		h1,h2,h3,h4,h5,h6,p {
+			margin: 0;
+		}		
+	</style>
+</head>
+<body>
+	<script>
+		var myListString = "apple, 0.99, banana, 0.50, peach, 0.25, orange, 0.75";
+		var theRegExp = /[^a-z]+/i;
+		var myFruitArray = myListString.split(theRegExp);
+
+		document.write(myFruitArray.join("<br>"));
+	</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 5, Example 1</title>
+	<style>
+		body {
+			color: #000;			
+			background: #ddd;
+			margin: 0;
+			padding: 100px 15px;
+			font-size: 30px;
+			font-family: monospace;
+			line-height: 1.5;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		/*
+			Program: Counting Occurrences of Substrings
+		*/
+
+		var myString = "Welcome to Wrox books. " +
+						"The Wrox website is www.wrox.com. " +
+						"Visit the Wrox website today. Thanks for buying Wrox";
+
+		var foundAtPosition = 0;
+		var wroxCount = 0;
+
+		while (foundAtPosition !== -1) {
+			
+			foundAtPosition = myString.indexOf("Wrox", foundAtPosition);
+			
+			if ( foundAtPosition !== -1 ) {
+				wroxCount++;
+				foundAtPosition++;
+			}
+		}
+
+		document.write("There are " + wroxCount + " occurrences of the word Wrox.");
+	</script>
+</body>
+</html>
