@@ -1,9 +1,9 @@
 /*
-	NOTE:
-	> We can create object in a couple of ways.
-	> One of is using object literals.
-	> This is the preferred way to create an object.
-	> We can pass object into a function as a parameter.
+
+We can create object in a couple of ways. One of is using object literals.
+This is the preferred way to create an object. We can pass object into a 
+function as an argument. Because function is object in JavaScript.
+
 */
 
 var person = { // Created object using object literal syntax
@@ -17,10 +17,10 @@ var person = { // Created object using object literal syntax
 };
 
 function greet(obj) {
-	console.log('Hello ' + obj.firstname); // Used obj parameter as an object
+	console.log('Hello ' + obj.firstname);
 }
 
-greet(person); // Passed person object as a parameter
+greet(person); // Passed `person` object as an argument
 
 greet({ // Created object on the fly
 	firstname: 'Mary'

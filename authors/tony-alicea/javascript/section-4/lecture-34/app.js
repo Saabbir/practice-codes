@@ -1,5 +1,8 @@
 /*
-	NOTE:
+
+**  Lecture Name: Arrays - Collection of anything
+
+	NOTES:
 	> JavaScript arrays are zero based.
 	> JavaScript arrays can hold any data type.
 */

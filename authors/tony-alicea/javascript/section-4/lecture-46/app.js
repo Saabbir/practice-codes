@@ -1,12 +1,13 @@
 /*
-	NOTE:
-	> All function objects has access to the
-	> bind(), call(), and apply() methods.
-	> These all three methods have to do
-	> with the this variable.
-	> bind() method do not execute the function.
-	> It just copy the function with the object reference.
+	Lecture Name: call(), apply(), bind()
+
+	NOTES:
+	> All function objects has access to the bind(), call(), and apply() methods.
+	> These all three methods has to do with the `this` variable.
+	> bind() method do not execute the function. It just copy the function and
+	> sets it's this variable to the given object and returns it.
 	> call(), and apply() methods executes the function. 
+	> apply() method accepts arguments as an array.
 */
 
 var person = {
@@ -37,14 +38,14 @@ logName.apply(person, ['en', 'es']);
 	console.log('-------------------');
 }).apply(person, ['es', 'en']);
 
-// function borrowing
+// Function borrowing
 var person2 = {
 	firstName: 'Jane',
 	lastName: 'Doe'
 }
 console.log(person.getFullName.apply(person2));
 
-// function currying
+// Function currying
 function multiply(a, b) {
 	return a * b;
 }

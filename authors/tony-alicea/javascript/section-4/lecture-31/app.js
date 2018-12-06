@@ -1,13 +1,7 @@
 /*
-	NOTE:
-	> In global execution context, all function statements
-	> and variables are stored in the memory location
-	> before syntax parser starts executing the code.
-	> This is happened in the creation phase of the execution context.
-	> And this is called hoisting.
-	> All variables in the execution context creation phase
-	> are set equal to undefined primitive data type value.
-	> Execution phase comes after creation phase in the execution context.
+
+	Lecture Name: Function Statement and Function Expression
+
 */
 
 greet(); // Will work as the function is already in the memory.
@@ -17,19 +11,19 @@ function greet() {
 	console.log('Hi');
 }
 
-//greetTwo(); // At this point, greetTwo variable is undefined. And undefined can't be invoked.
+//greetTwo(); // At this point, greetTwo variable is undefined. And undefined can't be invoked. TypeError will be thrown.
 
 // Function expression
 var greetTwo = function() {
 	console.log('Hey');
 }
 
-greetTwo();
+greetTwo(); // Logs 'Hey'
 
 function greetThree(fn) {
 	fn(); // Parameter used as a function
 }
 
-greetThree(function() { // Passed function as a parameter
+greetThree(function() { // Passed function as an argument
 	console.log('Hello');
 })

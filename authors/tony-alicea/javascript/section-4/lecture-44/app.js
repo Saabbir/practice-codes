@@ -1,8 +1,9 @@
 /*
-	NOTE:
-	> Every time a function is invoked.
-	> a new execution context is created
-	> with a new variable environment.
+	Lecture Name: Function Factories
+
+	NOTES:
+	> Every time a function is invoked, a new execution context is created
+	> with a brand new variable environment.
 */
 
 function makeGreeting(language) {

@@ -1,10 +1,12 @@
 /*
-	NOTE:
-	> Suppose I invoked a function named a
-	> and gave it a function as a parameter.
-	> The function a will invoke that function.
-	> This is called callback function.
-	> I call you and you call the function that I gave you.
+	Lecture Name: Closures and Callbacks
+
+	NOTES:
+	> Suppose I invoked a function named sayHi and gave it a function
+	> named sayHello as an argument. The function sayHi will invoke the function sayHello. 
+	> This is called callback function. I call you and you call the function that I gave you.
+	> In here sayHello is the callback function and sayHi is the higher order function.
+	
 */
 
 function sayHiLater() {

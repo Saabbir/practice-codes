@@ -1,3 +1,12 @@
+/*
+**  Lecture Name: Function Overloading
+
+	NOTES:
+	> In other programming languages has something called function overloading
+	> but in JavaScript we don't have that. It actually means a function can
+	> have same name of other function if it's paremeters are different.
+*/ 
+
 function greet(firstname, lastname, language) {
 
 	language = language || 'en';

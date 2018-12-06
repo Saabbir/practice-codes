@@ -1,7 +1,9 @@
 function a() {
 
 	function b() {
-		console.log(myVar); // This will print 2 for it's lexical outer environments reference
+		console.log(myVar); // Logs 2
+
+		// This function holds reference to it's outer enviroment lexically
 	}
 
 	var myVar = 2;

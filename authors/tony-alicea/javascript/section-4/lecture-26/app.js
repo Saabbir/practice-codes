@@ -1,11 +1,10 @@
 /*
-	NOTE:
-	> We can create object in a couple of ways.
-	> One of is using object constructor.
-	> But this is not the preferred way.
-	> We can access and set property in a object using both bracket and dot notation
-	> but dot notation is preferred way.
-	> Bracket notation can be helpful if we want to dynamically access into the property name string
+
+We can create object in a couple of ways. One of is using object constructor. 
+But this is not the preferred way. We can access and set property in a object 
+using both bracket notation and dot notation. But dot notation is preferred way. 
+Bracket notation can be helpful if we want to dynamically access property key string.
+
 */
 
 var person = new Object(); // Created object using object constructor

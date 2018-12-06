@@ -1,13 +1,16 @@
 /*
-	NOTE:
-	> Inner execution context always has reference
-	> to it's outer execution context.
-	> In other words, inner function always have access
-	> to it's outer functions variables.
-	> Even though the outer execution context
-	> or function is gone or finished running.
-	> It's called closure.
+
+**  Lecture Name: Understanding Closures
+
+	NOTES:
+	> Inner execution context always has reference to it's outer execution context
+	> in which it was created. In other words, inner function always have access
+	> to it's outer functions variables in which it was lexically created or sits.
+	> Even though the outer execution context was popped off from the call stack.
+	> The way of having reference to a variable enviroment which execution context
+	> was popped off from the call stack it's called closure.
 	> The scope chain always remain intact.
+
 */
 
 function greet(whattosay) {
@@ -17,6 +20,6 @@ function greet(whattosay) {
 	}
 }
 
-var sayHi = greet('Hello');
+var sayHi = greet('Hello'); // Returns a function which has access to the `whattosay` variable via closure
 
-sayHi('Saabbir');
+sayHi('Saabbir'); // Logs 'Hello Saabbir'
