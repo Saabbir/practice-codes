@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Title -->
+    <title>Todo App</title>
+
+    <!-- Google Font Nunito -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="section-padding">
+        <div class="site-width">
+            <h1>Todo Application</h1>
+            <div class="box">
+                <input class="form-field" id="search-todo" type="text" placeholder="Search todo">
+                <label>
+                    <input type="checkbox" id="hide-completed"> Hide Completed
+                </label>
+                <ul class="todo-list" id="todo-list"></ul>
+                <form id="new-todo-form">
+                    <input class="form-field" type="text" name="new_todo_input" placeholder="Something todo">
+                    <button class="button" id="new-todo-button">Add New Todo</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="uuidv4.js"></script>
+    <script src="functions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
