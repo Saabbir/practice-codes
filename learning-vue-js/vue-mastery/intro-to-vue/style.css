@@ -58,7 +58,7 @@ button {
 }
 
 .review-form {
-  width: 30%;
+  /* width: 30%; */
   padding: 20px;
   border: 1px solid #d8d8d8;  
 }
@@ -72,4 +72,8 @@ input {
 textarea {
   width: 100%;
   height: 60px;
+}
+
+.out-of-stock {
+  text-decoration: line-through;
 }
