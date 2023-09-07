@@ -1,5 +1,6 @@
 /**
  * Exercise - Stop Watch
+ * @constructor
  */
 
 function StopWatch() {
