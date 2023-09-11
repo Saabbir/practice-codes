@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial37</title>
+    <style>
+        body {
+            font-family: cursive;
+            font-size: 25px;
+            line-height: 45px;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        document.write("This tutorial is on Math - " + "<br>");
+
+        // function doSomething() {
+        //     document.write("To b Continue ");
+        // }
+        // setInterval("doSomething()", 1000);
+
+        function time(){
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            document.write(hours + " : " + minutes + " : " + seconds + "<br>");
+        }
+        setInterval("time()", 1000);
+    </script>
+</body>
+</html>

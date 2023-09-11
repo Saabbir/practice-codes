@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 1170px;
+	margin: 50px auto;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.mainmenu {
+	width: 960px;
+	margin: 0px auto;
+}
+.nav li {
+	display: inline;
+}
+.nav li a {
+	text-decoration: none;
+	background: #3984c6;
+	padding: 12px 24px;
+	color: #222;
+	margin-right: 10px;
+	font-family: comic sans ms;
+	border-radius: 3px;
+	-webkit-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+	-moz-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+	-ms-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+	-o-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+	transition: background 0.5s linear 0s, color 0.5s linear 0s;
+}
+.nav li a:hover {
+	color: yellow;
+	background: #bd332f;
+}

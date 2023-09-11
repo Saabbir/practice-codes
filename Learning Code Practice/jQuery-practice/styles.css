@@ -1,0 +1,41 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+
+}
+#container {
+	width: 960px;
+	margin: 50px auto;
+}
+.clickMe {
+	margin-bottom: 20px;
+}
+p {
+	display:none;
+}
+.contains-selector {
+	margin-bottom: 20px;
+}
+.even { 
+	color:#fff;
+	background:#000;
+}
+.odd {
+	color: yellow;
+	background: green;
+}
+#evenOdd {
+	margin-bottom: 20px;
+}
+#evenOdd h1 {
+	text-align: center;
+	padding: 10px;
+}
+.text {
+	border: 2px solid green;
+}
+.password {
+	border: 2px solid red;
+}

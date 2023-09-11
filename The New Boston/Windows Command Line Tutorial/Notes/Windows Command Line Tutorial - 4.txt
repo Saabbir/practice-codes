@@ -1,0 +1,13 @@
+/*
+** Windows Command Line Tutorial - 4
+** Make, remove directory
+*/
+
+* To make a directory:
+	* Syntax = mkdir foldername
+	
+* To remove a directory:
+	* Syntax = rmdir foldername
+	* Note: This command will only delete the folder if the folder is empty. To delete the folder completely with the inside folder or content:
+		* Syntax = rmdir /s foldername
+		* Note: After hitting this command, it will prompt you a message that are you sure? If  you're sure then press Y. Y = Yes.

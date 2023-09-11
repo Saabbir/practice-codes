@@ -1,0 +1,15 @@
+/*
+** Windows Command Line Tutorial - 2
+** See what inside of a directory.
+*/
+
+* To see what is inside of any folder press dir.
+	* Syntax = dir
+	* Example = You're inside of a folder called video. And you want to see what is inside of this folder. To see these press only dir keyword. 
+		* Syntax = C:\Users\Saabbir\Downloads\Video\dir
+	
+* Also can view from others directory:
+	* Syntax = C:\Users\Saabbir\dir Downloads\Video
+
+* To see all hidden directories:
+	* Syntax = dir /a

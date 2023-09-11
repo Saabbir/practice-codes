@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: comic sans ms;
+}
+#container {
+	width: 960px;
+	margin: 50px auto;
+}
+
+.text {
+	padding:10px 20px;
+	text-align:center;
+	margin-bottom:20px;
+}
+.password {
+	padding:10px 20px;
+	text-align:center;
+	margin-right: 10px;
+}
+.yellow {
+	background: yellow;
+	color: #fff;
+	padding: 7px 14px;
+	color: #000;
+	border: 1px solid black;
+	padding:10px 20px;
+}

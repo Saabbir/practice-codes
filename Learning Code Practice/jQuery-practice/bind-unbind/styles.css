@@ -1,0 +1,18 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: comic sans ms;
+}
+#container {
+	width: 960px;
+	margin: 50px auto;
+}
+.box {
+	background: green;
+	color: #fff;
+	width: 200px;
+	height: 200px;
+	margin-top: 20px;
+}

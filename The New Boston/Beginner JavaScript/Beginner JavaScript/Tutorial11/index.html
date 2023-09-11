@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial11</title>
+    <style>
+        body {
+            font-family: cursive;
+            font-size: 25px;
+            line-height: 45px;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        document.write("This tutorial is on global and local variables - " + "<br>");
+        
+/*        var company = "Webeeo"; // Outside function is it a global variable
+        function com(){
+            document.write(company + "<br>");
+        }
+        com();
+        document.write(company);*/
+        
+        function com(){
+            var company = "Webeeo"; // Inside function is it a local variable
+            document.write(company + "<br>");
+        }
+        com();
+        document.write(company);
+    </script>
+</body>
+</html>

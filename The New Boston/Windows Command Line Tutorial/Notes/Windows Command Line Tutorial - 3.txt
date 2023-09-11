@@ -1,0 +1,19 @@
+/*
+** Windows Command Line Tutorial - 3
+** Some commands.
+*/
+
+* To clear command prompt screen:
+	* Syntax = cls
+	
+* To see a specific type of file of a folder:
+	* Syntax = dir *.mp4(Whatever file extension you want to see only)
+	
+* cls = Clear Screen
+
+* To see previous command, press up arrow key from keyboard.
+
+* If you type any file name/file type on command prompt, it will open it on it's default program.
+
+* To see what a command does, press /? front of the keyword.
+	* Syntax = dir /?
