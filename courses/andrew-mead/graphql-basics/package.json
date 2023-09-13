@@ -1,0 +1,23 @@
+{
+  "name": "graphql-basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js -e js,graphql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@graphql-tools/load-files": "^7.0.0",
+    "graphql": "^16.7.1",
+    "graphql-yoga": "^4.0.4",
+    "uuid": "^9.0.0"
+  },
+  "engines": {
+    "node": "18.12.1",
+    "npm": "8.19.2"
+  }
+}
