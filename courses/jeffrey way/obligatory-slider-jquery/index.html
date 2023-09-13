@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obligatory Slider</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="c-slider">
+      <ul>
+        <li><img src="./images/image-1.png" alt="Image 1" /></li>
+        <li><img src="./images/image-2.png" alt="Image 2" /></li>
+        <li><img src="./images/image-3.png" alt="Image 3" /></li>
+        <li><img src="./images/image-4.png" alt="Image 4" /></li>
+        <!-- <li><img src="./images/image-5.png" alt="Image 5" /></li>
+        <li><img src="./images/image-6.png" alt="Image 6" /></li> -->
+      </ul>
+    </div>
+
+    <div class="c-slider-nav">
+      <button data-dir="prev">Previous</button>
+      <button data-dir="next">Next</button>
+    </div>
+
+    <!-- jQuery JS -->
+    <script src="./jquery-3.6.0.js"></script>
+
+    <!-- Slider JS -->
+    <script src="./slider.js"></script>
+
+    <!-- Activate Slider -->
+    <script>
+      !(function () {
+        var slider = new Slider(".c-slider", ".c-slider-nav");
+
+        slider.nav.find("button").on("click", function () {
+          slider.setCurrent($(this).data("dir"));
+          slider.transition();
+        });
+      })();
+    </script>
+  </body>
+</html>

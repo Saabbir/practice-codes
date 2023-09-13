@@ -1,0 +1,48 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 600px;
+  margin: 64px auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.c-slider {
+  width: inherit;
+  overflow: auto;
+}
+
+.c-slider ul {
+  display: flex;
+}
+
+.c-slider ul li {
+  flex-shrink: 0;
+}
+
+.c-slider-nav {
+  display: none;
+  margin-top: 2rem;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.c-slider-nav button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  min-width: 6rem;
+}
