@@ -1,5 +1,5 @@
-/*
- ** Use of ES2015 spread syntax.
+/**
+ * Use of ES2015 spread syntax.
  */
 
 var design = ["HTML", "CSS", "JavaScript", "jQuery", "AngularJS"];

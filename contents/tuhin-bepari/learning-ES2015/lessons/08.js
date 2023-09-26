@@ -1,4 +1,6 @@
-// ES2015 Classes
+/**
+ * ES2015 Classes
+ */
 
 class Car {
   constructor(brand, model, description, price) {

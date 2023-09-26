@@ -1,7 +1,8 @@
-/*
-New ways to create variables using let and const statement.
-Both let and const are block scoped.	
-*/
+/**
+ * New ways to create variables using
+ * let and const statement.
+ * Both let and const are block scoped.
+ */
 
 var x = 10;
 const birthYear = 1990;

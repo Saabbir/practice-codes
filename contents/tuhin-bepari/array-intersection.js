@@ -1,5 +1,6 @@
-// Array Intersection
-
+/**
+ * Array Intersection
+ */
 function intersection() {
   let outputArray = [];
   const inputArrays = [];

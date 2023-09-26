@@ -1,5 +1,6 @@
-/*
- ** ES2015 template literals and function default parameters.
+/**
+ * ES2015 template literals and
+ * function default parameters.
  */
 
 function fee(name = "John", message, fees) {

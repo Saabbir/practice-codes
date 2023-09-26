@@ -1,5 +1,5 @@
-/*
- ** ES2015 enhanced object method definations
+/**
+ * ES2015 enhanced object method definitions
  */
 
 var cat = {

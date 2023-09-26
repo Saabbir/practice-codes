@@ -1,4 +1,6 @@
-// ES2015 Modules and Generators
+/**
+ * ES2015 Modules and Generators
+ */
 
 import 'babel-core/polyfill';
 
