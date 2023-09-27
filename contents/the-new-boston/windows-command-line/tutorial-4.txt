@@ -7,9 +7,9 @@
 	* Syntax = cls
 	
 * To see a specific type of file of a folder:
-	* Syntax = dir *.mp4(Whatever file extension you want to see only)
+	* Syntax = dir *.mp4 (Whatever file extension you want to see only)
 	
-* cls = Clear Screen
+* cls stands for = Clear Screen
 
 * To see previous command, press up arrow key from keyboard.
 

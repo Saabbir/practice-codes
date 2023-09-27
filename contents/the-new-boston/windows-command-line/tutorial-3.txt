@@ -3,7 +3,7 @@
 ** See what inside of a directory.
 */
 
-* To see what is inside of any folder press dir.
+* To see what is inside of any folder use `dir` command.
 	* Syntax = dir
 	* Example = You're inside of a folder called video. And you want to see what is inside of this folder. To see these press only dir keyword. 
 		* Syntax = C:\Users\Saabbir\Downloads\Video\dir

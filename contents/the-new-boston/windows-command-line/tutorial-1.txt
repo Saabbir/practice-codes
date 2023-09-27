@@ -13,8 +13,8 @@
 
 * To change directory: Type cd on command prompt then press one space then type the folder name where you want to go.
 	* Syntax = cd foldername
-	* Example = cd Desktop(Whatever your folder name)
-	* Tips: You can press first letter of any folder and hit tab then it will          autocomplete your folder name. It will help you to getting error from typos.
+	* Example = cd Desktop (Whatever your folder name is)
+	* Tips: You can press first letter of any folder or file and hit tab to use command line autocomplete feature. It will help you to avoid typos.
 	* Syntax = cd (d + tab) > it will autocomplete into Desktop
 		
 * To go parent directory:
