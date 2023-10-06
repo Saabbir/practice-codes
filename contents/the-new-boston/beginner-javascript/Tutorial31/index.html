@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Tutorial31</title>
     <style>
-        body {
-            font-family: cursive;
-            font-size: 25px;
-            line-height: 45px;
-            margin: 100px;
-        }
+      body {
+        font-family: cursive;
+        font-size: 25px;
+        line-height: 45px;
+        margin: 100px;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <script>
-        document.write("This tutorial is on Array - " + "<br>");
+      document.write("This tutorial is on Array - " + "<br>");
 
-        var member = new Array("Sajal", "Fardous", "Afjal", "Sohel", "Noman", "Ashik");
-        var string = member.join(" | ");
-        document.write(string + "<br>");
+      var member = new Array(
+        "Sajal",
+        "Fardous",
+        "Afjal",
+        "Sohel",
+        "Noman",
+        "Ashik"
+      );
+      var string = member.join(" | ");
+      document.write(string + "<br>");
 
-        var member = new Array("Sajal", "Fardous", "Afjal", "Sohel", "Noman", "Ashik");
-        document.write(member[4] + "<br>");
-        member.pop();
-        document.write(member[4]);
-        member.pop();
+      var member = new Array(
+        "Sajal",
+        "Fardous",
+        "Afjal",
+        "Sohel",
+        "Noman",
+        "Ashik"
+      );
+      document.write(member[4] + "<br>");
+      member.pop();
+      document.write(member[4]);
+      member.pop();
     </script>
-</body>
+  </body>
 </html>

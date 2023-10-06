@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Tutorial10</title>
     <style>
-        body {
-            font-family: cursive;
-            font-size: 25px;
-            line-height: 45px;
-            margin: 100px;
-        }
+      body {
+        font-family: cursive;
+        font-size: 25px;
+        line-height: 45px;
+        margin: 100px;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <script>
-        document.write("This tutorial is on calling a function form another function - " + "<br>");
-/*        function first(){
+      document.write(
+        "This tutorial is on calling a function form another function - " +
+          "<br>"
+      );
+      /*        function first(){
             document.write("This is a text" + "<br>");
         }
         function second(){
@@ -27,15 +29,15 @@
             second();
         }
         third();*/
-        function first(){
-            document.write(" First " + "<br>");
-            second();
-        }
-        function second(){
-            document.write(" Second " + "<br>");
-            first();
-        }
+      function first() {
+        document.write(" First " + "<br>");
+        second();
+      }
+      function second() {
+        document.write(" Second " + "<br>");
         first();
+      }
+      first();
     </script>
-</body>
+  </body>
 </html>
